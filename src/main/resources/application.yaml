@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /ems-backend
+spring:
+  application:
+    name: ems-backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/ems?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: ems_user
+    password: NewPassword123!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+app:
+  jwt-secret: VGhpc0lzQVN1ZmZpY2llbnRseUxvbmdTZWNyZXRLZXlGb3JKV1QxMjM0NTY=
+  jwt-expiration-milliseconds: 604800000
